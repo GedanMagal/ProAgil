@@ -4597,6 +4597,31 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "ProAgil.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/ProAgil.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProAgil.Domain.dll": {}
+        }
+      },
+      "ProAgil.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "2.2.0",
+          "ProAgil.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProAgil.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProAgil.Repository.dll": {}
+        }
       }
     }
   },
@@ -12485,6 +12510,16 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "ProAgil.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ProAgil.Domain/ProAgil.Domain.csproj",
+      "msbuildProject": "../ProAgil.Domain/ProAgil.Domain.csproj"
+    },
+    "ProAgil.Repository/1.0.0": {
+      "type": "project",
+      "path": "../ProAgil.Repository/ProAgil.Repository.csproj",
+      "msbuildProject": "../ProAgil.Repository/ProAgil.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12492,7 +12527,9 @@
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 2.2.0",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.NETCore.App >= 2.2.0",
+      "ProAgil.Domain >= 1.0.0",
+      "ProAgil.Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12502,11 +12539,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Gedan\\Desktop\\ASP.NET CORE - UDEMY\\ProAgil.Api\\ProAgil.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Gedan\\Desktop\\ASP.NET CORE - UDEMY\\ProAgil.Api\\ProAgil.Api.csproj",
       "projectName": "ProAgil.Api",
-      "projectPath": "c:\\Users\\Gedan\\Desktop\\ASP.NET CORE - UDEMY\\ProAgil.Api\\ProAgil.Api.csproj",
+      "projectPath": "C:\\Users\\Gedan\\Desktop\\ASP.NET CORE - UDEMY\\ProAgil.Api\\ProAgil.Api.csproj",
       "packagesPath": "C:\\Users\\Gedan\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Gedan\\Desktop\\ASP.NET CORE - UDEMY\\ProAgil.Api\\obj\\",
+      "outputPath": "C:\\Users\\Gedan\\Desktop\\ASP.NET CORE - UDEMY\\ProAgil.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12522,7 +12559,14 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Gedan\\Desktop\\ASP.NET CORE - UDEMY\\ProAgil.Domain\\ProAgil.Domain.csproj": {
+              "projectPath": "C:\\Users\\Gedan\\Desktop\\ASP.NET CORE - UDEMY\\ProAgil.Domain\\ProAgil.Domain.csproj"
+            },
+            "C:\\Users\\Gedan\\Desktop\\ASP.NET CORE - UDEMY\\ProAgil.Repository\\ProAgil.Repository.csproj": {
+              "projectPath": "C:\\Users\\Gedan\\Desktop\\ASP.NET CORE - UDEMY\\ProAgil.Repository\\ProAgil.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

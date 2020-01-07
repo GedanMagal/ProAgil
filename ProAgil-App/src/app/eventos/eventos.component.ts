@@ -27,9 +27,6 @@ export class EventosComponent implements OnInit {
   mostrarImagem = false;
   textButton = '';
 
-
-
-
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
@@ -41,6 +38,7 @@ export class EventosComponent implements OnInit {
     this.eventos = this.http.get('http://localhost:5000/api/values').subscribe(
       resp => {
         this.eventos = resp;
+        this.eventosFiltrados = this.eventos;
         console.log(resp);
       },
       err => {
